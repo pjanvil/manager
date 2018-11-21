@@ -7,6 +7,7 @@ import firebase from 'firebase';
 
 class App extends Component {
     componentWillMount() {
+
         var config = {
             apiKey: "AIzaSyDwlhvj0y5EjEvosMo5ogfOD6Kj3Ky3tRA",
             authDomain: "manager-5ce30.firebaseapp.com",
@@ -16,6 +17,7 @@ class App extends Component {
             messagingSenderId: "271825223108"
         };
         firebase.initializeApp(config);
+        
     }
 
 
