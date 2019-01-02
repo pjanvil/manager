@@ -7,11 +7,18 @@ const RouterComponent = () => {
     return (
         <Router>
             <Scene key="root">
-                <Scene key="login" component={LoginForm} title="Please Login"></Scene>
-                <Scene key="employeeList" component={EmployeeList} title="Employee List" initial />
+                <Scene key="login" sceneStyle={styles.formStyle} component={LoginForm} title="Please Login" initial></Scene>
+                <Scene key="employeeList" sceneStyle={styles.formStyle} component={EmployeeList} title="Employee List" />
             </Scene>
         </Router>
     );
 };
+
+const styles = {
+    formStyle: {
+        flex: 1,
+        paddingTop: 52
+    }
+}
 
 export default RouterComponent;
