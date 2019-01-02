@@ -7,8 +7,19 @@ const RouterComponent = () => {
     return (
         <Router>
             <Scene key="root">
-                <Scene key="login" sceneStyle={styles.formStyle} component={LoginForm} title="Please Login" initial></Scene>
-                <Scene key="employeeList" sceneStyle={styles.formStyle} component={EmployeeList} title="Employee List" />
+                <Scene key="auth">
+                    <Scene key="login" sceneStyle={styles.formStyle} component={LoginForm} title="Please Login" initial></Scene>
+                </Scene>
+                <Scene key="main">
+                    <Scene
+                        rightTitle="Add"
+                        onRight={() => {console.log('alert')}}
+                        key="employeeList"
+                        sceneStyle={styles.formStyle}
+                        component={EmployeeList}
+                        title="Employee List"
+                    />
+                </Scene>
             </Scene>
         </Router>
     );
