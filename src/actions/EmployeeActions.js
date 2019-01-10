@@ -23,7 +23,7 @@ export const employeeCreate = ({name, phone, shift}) => {
             Actions.employeeList({ type: 'reset' })
             });
     };
-}
+};
 
 export const employeesFetch = () => {
     const { currentUser } = firebase.auth();
