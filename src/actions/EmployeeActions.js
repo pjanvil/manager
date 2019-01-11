@@ -31,7 +31,6 @@ export const employeesFetch = () => {
     firebase.database().ref(`/users/${currentUser.uid}/employees`)
       .on('value', snapshot => {
         // snapshot is an object not an array
-        console.log(EMPLOYEES_FETCH_SUCCESS, snapshot.val());
         dispatch({type: EMPLOYEES_FETCH_SUCCESS, payload: snapshot.val()});
       });
   };
